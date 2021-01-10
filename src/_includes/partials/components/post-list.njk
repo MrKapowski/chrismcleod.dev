@@ -2,7 +2,6 @@
   <section aria-labelledby="latest" class="cmd-series-container cmd-series-container--postpage cmd-text-align-center{% if '/archive' not in page.url %} cmd-gradient-border{% endif %} cmd-mt-md">
     {% if '/archive' not in page.url %}
       <h2 id="latest" class="cmd-ink--secondary">Latest Posts</h2>
-      <a href="/archive/" class="cmd-button">Browse the whole archive</a>
     {% endif %}
     <ol class="cmd-column-container cmd-column-container--postpage cmd-mt-lg h-feed" reversed="reversed">
       {% for item in postListItems %}
@@ -23,5 +22,8 @@
         {% endif %}
       {% endfor %}
     </ol>
+    {% if '/archive' not in page.url %}
+      <a href="/archive/" class="cmd-button">Browse the whole archive</a>
+    {% endif %}
   </section>
 {% endif %}

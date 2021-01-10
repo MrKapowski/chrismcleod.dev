@@ -1,24 +1,26 @@
-{% if not introSummary %}
-    {% set introSummary = site.shortDesc | markdownFilter %}
-{% endif %}
-<div class="h-card cmd-hcard">
-    <h1 class="p-name{{ ' visually-hidden' if page.url === '/' }}"{{ ' aria-hidden="true"' if page.url === '/' }}>{{site.name}}</h1>
-    <img class="u-photo cmd-hcard-avatar" src="/images/avatar.jpg" alt="Chris McLeod's avatar">
-    {% if introSummary %}
-    <p class="p-note">
-            {{ introSummary | safe }}
-    </p>
-    {% endif %}
-    {% if elsewhere.places %}
-        <div class="cmd-elsewhere">
-            <h2>Find me elsewhere:</h2>
-            <ul class="elsewhere cmd-elsewhere-places">
-                {% for place in elsewhere.places %}
-                    <li>
-                        <a rel="me" class="u-url" href="{{place.url}}">{{place.name}}</a>
-                    </li>
-                {% endfor %}
-            </ul>
+<div class="cmd-hcard cmd-series-container cmd-mt-md">
+    <div class="h-card">
+        <div class="cmd-hcard-avatar">
+            <img class="u-photo" src="{{ site.authorPicture }}" alt="{{site.authorName}}'s avatar" >
         </div>
-    {% endif %}
+        <div class="cmd-hcard-details">
+            {% if introSummary %}
+            <div class="p-note">
+                    {{ introSummary | safe }}
+            </div>
+            {% endif %}
+            {% if elsewhere.places %}
+                <div class="cmd-elsewhere">
+                    <h2>Find me elsewhere:</h2>
+                    <ul class="elsewhere cmd-elsewhere-places">
+                        {% for place in elsewhere.places %}
+                            <li>
+                                <a rel="me" class="u-url" href="{{place.url}}">{{place.name}}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        </div>
+    </div>
 </div>

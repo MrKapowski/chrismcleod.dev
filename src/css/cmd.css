@@ -1219,15 +1219,24 @@ a.heading-permalink {
     margin-top: 0.2em;
     color: #e6e3e9;
 }
-
-.cmd-hcard{
+/* .cmd-hcard{
     margin-bottom: 0;
     margin-top: 2em;
-    display: flex;
+    border-radius: 4px;
+    background-color: var(--card-color-bg);
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .18);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .18);
+    border-top: 3px solid var(--card-color-bg);
+    padding: 0.65em;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    grid-gap: 1em;
 }
 .cmd-hcard .cmd-hcard-avatar{
-    width: 180px;
-    height: 180px;
+    grid-row: auto / span 2;
+    align-self: center;
+}
+.cmd-hcard picture{
     border-radius: 4px;
 }
 .cmd-page-footer .cmd-hcard .cmd-hcard-avatar{
@@ -1240,4 +1249,35 @@ a.heading-permalink {
     line-height: 1;
     margin: 0 0 0.4em;
     font-weight: 600;
+} */
+.cmd-hcard .h-card{
+    display: flex;
+    max-width: 120ch;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.cmd-hcard .cmd-hcard-avatar{
+    width: 240px;
+    height: 240px;
+    flex: 1 1 240px;
+    align-self: center;
+}
+.cmd-hcard .cmd-hcard-avatar img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    -o-object-fit: cover;
+        object-fit: cover;
+    -o-object-position: 50% 50%;
+        object-position: 50% 50%;
+    border: 3px solid #fff;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .18);
+    border-radius: 4px;
+    margin: 0;
+}
+.cmd-hcard .cmd-hcard-details{
+    padding: 16px 32px;
+    flex: 4 1 40ch;
+    text-align: left;
 }
