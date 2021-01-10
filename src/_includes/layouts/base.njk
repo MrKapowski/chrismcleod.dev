@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml" />
+  <link rel="icon" href="{{ site.faviconPath }}" type="image/png" />
+
+  
+
+  {% include "partials/global/meta-info.njk" %}
+  {% include "partials/global/meta-indieweb.njk" %}
+  <script>document.documentElement.classList.remove('no-js');</script>
+  <!-- Notably iOS UAs also contain Mac OS X -->
+  <script csp-hash>if (/Mac OS X/.test(navigator.userAgent))document.documentElement.classList.add('apple')
+  </script>
+  <!-- css is inserted by optimize-html custom plugin -->
+  {# <style>{% include "../../css/cmd.css" %}</style> #}
+  {% block head %}
+  {% endblock %}
+</head>
+<body{% block bodyClasses %}{% endblock bodyClasses %}>
+  {% include "partials/global/site-head.njk" %}
+  {% block content %}
+  {% endblock content %}
+  {% block foot %}
+  {% endblock %}
+  {% include "partials/global/site-foot.njk" %}
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js');
+      });
+    }
+  </script>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" defer></script>
+  <!-- Current page: {{ page.url | url }} -->
+</body>
+</html>
