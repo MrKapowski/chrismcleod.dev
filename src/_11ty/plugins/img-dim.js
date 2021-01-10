@@ -26,7 +26,7 @@ const blurryPlaceholder = require("./blurry-placeholder");
 const srcset = require("./srcset");
 const path = require("path");
 
-const ACTIVATE_AVIF = true;
+const ACTIVATE_AVIF = false;
 
 /**
  * Sets `width` and `height` on each image, adds blurry placeholder
