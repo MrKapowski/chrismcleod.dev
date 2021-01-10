@@ -19,6 +19,7 @@ const parseTransform = require('./src/_11ty/transforms/parse-transform.js');
 
 // Import data files
 const site = require('./src/_data/site.json');
+const elsewhere = require('./src/_data/elsewhere.json');
 
 
 module.exports = function(config) {

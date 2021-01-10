@@ -29,19 +29,15 @@
       {{ content | safe }}
 
       {% if tags %}
-        <footer class="[ post__footer ] [ pad-top-500 pad-bottom-500 ]">
-          <div class="inner-wrapper">
-            <div class="[ nav ] [ box-flex align-center ]">
-              <h2 class="font-base text-600 weight-mid">Filed under</h2>
-              <ul class="[ nav__list ] [ box-flex align-center pad-left-400 ] [ p-category ]">
-                {% for item in tags %}
-                  <li class="nav__item">
-                    <a href="/tags/{{ item }}" rel="u-category">{{ item }}</a>
-                  </li>
-                {% endfor %}
-              </ul>
-            </div>
-          </div>
+        <footer class="">
+          <h2 class="cmd-h3">Filed under</h2>
+          <ul class="p-category cmd-tags">
+            {% for item in tags %}
+              <li class="cmd-tag" data-icon="🏷">
+                <a href="/tags/{{ item }}" rel="u-category">{{ item }}</a>
+              </li>
+            {% endfor %}
+          </ul>
         </footer>
       {% endif %}
     </article>
@@ -59,7 +55,10 @@
             <div class="cmd-card__content">
               <a href="{{ post.url }}" class="cmd-card__title">
                 <span>{{ post.data.title }}</span></a>
-              <p>{{ post.data.description }}</p>
+              <p>
+                <time datetime="{{ post.data.date | w3DateFilter }}" class="dt-published">{{ post.data.date | dateFilter }}</time>
+                <span>{{ helpers.getReadingTime(post.templateContent) }} minute read</span>
+              </p>
             </div>
           </li>
         {%- endfor -%}

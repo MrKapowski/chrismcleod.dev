@@ -1,0 +1,19 @@
+{
+    "places": [
+        {
+            "name": "Twitter",
+            "url": "https://twitter.com/MstrKapowski",
+            "icon": "twitter.svg"
+        },
+        {
+            "name": "Github",
+            "url": "https://github.com/MrKapowski/",
+            "icon": "github.svg"
+        },
+        {
+            "name": "Mrkapowski.com (archived blog)",
+            "url": "https://mrkapowski.com/",
+            "icon": "website.svg"
+        }
+    ]
+}

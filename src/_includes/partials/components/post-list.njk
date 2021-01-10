@@ -1,21 +1,27 @@
 {% if postListItems.length %}
-  <section class="[ post-list ] [ pad-top-700 gap-bottom-900 ]">
-    <div class="[ inner-wrapper ] [ sf-flow ]">
-      <h2 class="[ post-list__heading ] [ text-700 md:text-800 ]">{{ postListHeading }}</h2>
-      <ol class="[ post-list__items ] [ sf-flow ] [ pad-top-300 ]" reversed>
-        {% for item in postListItems %}
-          {% if item.date.getTime() <= global.now %}
-            <li class="post-list__item">
-              <h3 class="font-base leading-tight text-600 weight-mid">
-                <a href="{{ item.url }}" class="post-list__link" rel="bookmark">{{ item.data.title }}</a>
-              </h3>
-              <p class="text-500 gap-top-300 weight-mid">
-                <time datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateFilter }}</time>
+  <section aria-labelledby="latest" class="cmd-series-container cmd-series-container--postpage cmd-text-align-center{% if '/archive' not in page.url %} cmd-gradient-border{% endif %} cmd-mt-md">
+    {% if '/archive' not in page.url %}
+      <h2 id="latest" class="cmd-ink--secondary">Latest Posts</h2>
+      <a href="/archive/" class="cmd-button">Browse the whole archive</a>
+    {% endif %}
+    <ol class="cmd-column-container cmd-column-container--postpage cmd-mt-lg h-feed" reversed="reversed">
+      {% for item in postListItems %}
+        {% if item
+          .date
+          .getTime() <= global
+          .now %}
+          <li class="cmd-card">
+            <div class="cmd-card__content hentry">
+              <a href="{{ item.data.url }}" class="cmd-card__title u-url p-name" rel="bookmark">
+                <span>{{ item.data.title }}</span></a>
+              <p>
+                <time datetime="{{ item.date | w3DateFilter }}" class="dt-published">{{ item.date | dateFilter }}</time>
+                <span>— {{ helpers.getReadingTime(item.templateContent) }} minute read</span>
               </p>
-            </li>
-          {% endif %}
-        {% endfor %}
-      </ol>
-    </div>
+            </div>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ol>
   </section>
 {% endif %}
