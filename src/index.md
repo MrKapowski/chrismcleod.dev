@@ -8,4 +8,4 @@ socialImage: ''
 useHeader: false
 useFooter: false
 ---
-I'm a software guy, #indieweb proponent, mainly here for the snark, puns, and toy soldiers. He/him/his
+I'll full this bit out properly when i get a chance 😀
