@@ -4,6 +4,7 @@
             <img class="u-photo" src="{{ site.authorPicture }}" alt="{{site.authorName}}'s avatar" >
         </div>
         <div class="cmd-hcard-details">
+            <h1 class="p-name cmd-hcard-name{% ' visually-hidden' if page.url === '/' %}">{{ site.authorName }}</h1>
             {% if introSummary %}
             <div class="p-note">
                     {{ introSummary | safe }}
