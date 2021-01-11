@@ -28,7 +28,7 @@ const avif = require("./avif");
  * Generates sensible sizes for each image for use in a srcset.
  */
 
-const widths = [1920, 1280, 640, 320];
+const widths = [1920, 1280, 640, 320, 240, 180, 90, 45];
 
 const extension = {
   jpeg: "jpg",

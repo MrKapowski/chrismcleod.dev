@@ -25,9 +25,7 @@
   {% endblock content %}
   {% block foot %}
   {% endblock %}
-  {% if useFooter !== false %}
-    {% include "partials/global/site-foot.njk" %}
-  {% endif %}
+  {% include "partials/global/site-foot.njk" %}
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
