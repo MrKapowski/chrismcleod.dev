@@ -1,6 +1,7 @@
 <footer class="cmd-series-container cmd-series-container--postpage cmd-text-align-center cmd-gradient-border cmd-mt-md cmd-page-footer">
   {% if page.url !== '/' %}
-  {% include 'partials/components/hcard.njk' %}
+  {% set introSummary = site.shortDesc | markdownFilter | safe %}
+  {# {% include 'partials/components/hcard.njk' %} #}
   <div class="">
     <div>
       {% set ariaLabel = 'footer navigation' %}

@@ -1,5 +1,5 @@
 {% if postListItems.length %}
-  <section aria-labelledby="latest" class="cmd-series-container cmd-series-container--postpage cmd-text-align-center{% if '/archive' not in page.url %} cmd-gradient-border{% endif %} cmd-mt-md">
+  <section {{ 'aria-labelledby="latest" ' if '/archive' not in page.url }}class="cmd-series-container cmd-series-container--postpage cmd-text-align-center{{ ' cmd-gradient-border' if '/archive' not in page.url }} cmd-mt-md">
     {% if '/archive' not in page.url %}
       <h2 id="latest" class="cmd-ink--secondary">Latest Posts</h2>
     {% endif %}
