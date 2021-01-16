@@ -1,7 +1,4 @@
 {% extends 'layouts/base.njk' %}
-{% block bodyClasses %}
-  class="h-entry"
-{% endblock %}
 {# Intro content #}
 {% set introHeading = title %}
 {% set introSummary %}
@@ -21,6 +18,7 @@
 {% endset %}
 
 {% block content %}
+<div class="h-entry”>
   {% include "partials/components/intro.njk" %}
 
   <main id="main-content" tabindex="-1" class="cmd-container cmd-postpage">
@@ -42,6 +40,7 @@
       {% endif %}
     </article>
   </main>
+</div>
 {% endblock %}
 
 {% block foot %}
