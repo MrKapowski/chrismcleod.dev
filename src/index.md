@@ -8,4 +8,4 @@ socialImage: ''
 useHeader: false
 useFooter: false
 ---
-I'll full this bit out properly when i get a chance 😀
+I'll full this bit out properly when I get a chance 😀

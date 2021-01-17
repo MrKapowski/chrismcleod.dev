@@ -6,7 +6,8 @@ npm-debug.*
 .DS_Store
 .sass-cache
 node_modules
-dist 
+dist
+.vscode
 
 # Specifics
 .env
@@ -14,3 +15,4 @@ src/images/*-[0-9][0-9][0-9][0-9]w.*
 src/images/*-[0-9][0-9][0-9]w.*
 src/images/*-[0-9][0-9]w.*
 src/images/*.blurred
+src/posts/samples/*

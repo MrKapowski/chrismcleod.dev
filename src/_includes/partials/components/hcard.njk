@@ -12,7 +12,7 @@
             {% endif %}
             {% if page.url === '/' %}
               <section aria-labelledby="latest" class="cmd-mt-md">
-                <h2 id="latest" class="cmd-ink--secondary">Latest Posts</h2>
+                <h2 id="latest" class="">Latest Posts</h2>
                 <ol class="h-feed" reversed="reversed">
                 {% for item in postListItems %}
                     {% if item
@@ -33,12 +33,12 @@
                 {% endfor %}
                 </ol>
                 {% if '/archive' not in page.url %}
-                <a href="/archive/" class="cmd-button">Browse the whole archive</a>
+                <a href="/archive/" class="cmd-archive-link">Browse the whole archive ➡</a>
                 {% endif %}
             </section>
             {% endif %}
             {% if elsewhere.places %}
-                <div class="cmd-elsewhere">
+                <div class="cmd-elsewhere cmd-mt-md">
                     <h2>Find me elsewhere:</h2>
                     <ul class="elsewhere cmd-elsewhere-places">
                         {% for place in elsewhere.places %}

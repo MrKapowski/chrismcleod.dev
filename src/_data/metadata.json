@@ -6,14 +6,14 @@
   "feed": {
     "subtitle": "because RSS is for the cool kids",
     "filename": "feed.xml",
-    "path": "/feed/feed.xml",
+    "path": "/feed.xml",
     "url": "https://chrismcleod.dev/feed.xml",
     "id": "https://chrismcleod.dev"
   },
   "jsonfeed": {
     "subtitle": "because JSON feed is for the (other) cool kids",
     "filename": "feed.json",
-    "path": "/feed/feed.json",
+    "path": "/feed.json",
     "url": "https://chrismcleod.dev/feed.json",
     "id": "https://chrismcleod.dev"
   },

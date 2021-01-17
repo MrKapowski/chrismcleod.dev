@@ -3,6 +3,7 @@ title: New Year, New Blog
 date: '2021-01-01'
 tags:
   - blog
+metaDesc: "In which I write briefly about my new blog setup, including what is to come in the future."
 ---
 New blog, who dis?
 

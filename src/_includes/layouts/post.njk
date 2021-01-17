@@ -1,7 +1,9 @@
 {% extends 'layouts/base.njk' %}
+{% block bodyClasses%} class="h-entry"{%endblock%}
 {# Intro content #}
 {% set introHeading = title %}
 {% set introSummary %}
+
 <p class="cmd-lead cmd-ink--gray cmd-mt-md">
   <span>
     {% if date %}
@@ -11,14 +13,13 @@
       {{ helpers.getReadingTime(content) }}
       minute read</span>
     <small class="cmd-row">
-      <a href="{{ site.url }}" class="h-card u-url p-name p-author" rel="author">{{ site.authorName }}</a> — <a href="{{ url }}" class="u-url u-uid" rel="bookmark">Permanent Link</a>
+      <a href="{{ url }}" class="u-url u-uid" rel="bookmark">Permanent Link</a>
     </small>
   </span>
 </p>
 {% endset %}
 
 {% block content %}
-<div class="h-entry">
   {% include "partials/components/intro.njk" %}
 
   <main id="main-content" tabindex="-1" class="cmd-container cmd-postpage">
@@ -40,7 +41,6 @@
       {% endif %}
     </article>
   </main>
-</div>
 {% endblock %}
 
 {% block foot %}
