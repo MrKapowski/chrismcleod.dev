@@ -45,19 +45,19 @@ module.exports = async function srcset(filename, format) {
 
 async function resize(filename, width, format) {
   const out = sizedName(filename, width, format);
-  if (await exists("src" + out)) {
+  if (await exists("dist" + out)) {
     return out;
   }
   if (format == "avif") {
-    await avif("src" + filename, "src" + out, width);
+    await avif("dist" + filename, "src" + out, width);
   } else {
-    await sharp("src" + filename)
+    await sharp("dist" + filename)
       .resize(width)
       [format]({
         quality: 60,
         reductionEffort: 6,
       })
-      .toFile("src" + out);
+      .toFile("dist" + out);
   }
 
   return out;

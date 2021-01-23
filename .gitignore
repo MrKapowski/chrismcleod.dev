@@ -11,8 +11,8 @@ dist
 
 # Specifics
 .env
-#src/images/*-[0-9][0-9][0-9][0-9]w.*
-#src/images/*-[0-9][0-9][0-9]w.*
-#src/images/*-[0-9][0-9]w.*
-#src/images/*.blurred
+src/images/*-[0-9][0-9][0-9][0-9]w.*
+src/images/*-[0-9][0-9][0-9]w.*
+src/images/*-[0-9][0-9]w.*
+src/images/*.blurred
 src/posts/samples/*
