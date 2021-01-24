@@ -260,7 +260,7 @@ aside>h2{
     font-weight: 700;
 }
 strong {
-    font-weight: 500;
+    font-weight: 600;
     color: var(--primary-color-text-dark)
 }
 
@@ -496,7 +496,7 @@ hr {
     height: 1px;
     margin: 3rem auto;
     border: none;
-    background: linear-gradient(var(--cmd-gradient-angle), #d367c1 10%, #dedf40 25%, #62cb5c 50%, #00bbcb 75%, #ab79d6 90%)
+    background: var(--muted-accent-color);
 }
 
 .cp_embed_wrapper {
