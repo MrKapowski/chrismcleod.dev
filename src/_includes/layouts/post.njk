@@ -47,7 +47,7 @@
   {%- if collections.posts.length > 1 -%}
     <aside aria-labelledby="next" class="cmd-series-container cmd-series-container--postpage cmd-text-align-center cmd-gradient-border cmd-mt-md">
       <h2 id="next" class="cmd-ink--secondary">What to Read Next</h2>
-      <a href="/" class="cmd-button">Browse the whole archive</a>
+      <a href="/archive/" class="cmd-button">Browse the whole archive</a>
       <ul class="cmd-column-container cmd-column-container--postpage cmd-mt-lg">
         {%- for post in collections.posts | randomLimit(3, page.url) -%}
           <li class="cmd-card">
@@ -62,6 +62,7 @@
           </li>
         {%- endfor -%}
       </ul>
+      <a href="/" class="cmd-button">Browse the whole archive</a>
     </aside>
   {%- endif -%}
 {% endblock %}

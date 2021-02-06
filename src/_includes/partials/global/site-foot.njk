@@ -1,14 +1,21 @@
 <footer class="cmd-series-container cmd-series-container--postpage cmd-text-align-center cmd-gradient-border cmd-mt-md cmd-page-footer">
-  {% if page.url !== '/' %}
-  {% set introSummary = site.shortDesc | markdownFilter | safe %}
-  {# {% include 'partials/components/hcard.njk' %} #}
-  <div class="">
-    <div>
-      {% set ariaLabel = 'footer navigation' %}
-      {% include "partials/components/nav.njk" %}
-    </div>
-  </div>
-  {% else %}
+
   <p>&copy; 2021 Chris McLeod, unless otherwise noted.</p>
-  {% endif %}
+  <div class="cmd-footer-badges">
+    <ul class="cmd-memberships">
+      <li>
+        <a href="http://www.bcs.org/">
+          <img class="membership-badge" height="180px" width="390px" src="/images/mbcs-logo-black.jpg" alt="Chartered Institure for IT: Professional Member badge">
+        </a>
+      </li>
+    </ul>
+
+    <ul class="cmd-certifications">
+      <li>
+        <a href="https://www.youracclaim.com/badges/ca8a6cf0-86f1-4f30-b82b-bfb43d1f8793">
+          <img class="certification-badge" height="180px" width="180px" src="/images/azure-fundamentals.png" alt="Microsoft Certified: Azure Fundamentals badge">
+        </a>
+      </li>
+    </ul>
+  </div>
 </footer>

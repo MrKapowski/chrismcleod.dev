@@ -4,6 +4,7 @@
   "description": "A personal site and blog, based on numerous Eleventy starters",
   "main": "index.js",
   "dependencies": {
+    "@11ty/eleventy-img": "^0.7.8",
     "@ampproject/toolbox-optimizer": "^2.7.5",
     "@saschazar/wasm-avif": "^1.0.0",
     "@tbranyen/jsdom": "^13.0.0",
